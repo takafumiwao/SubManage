@@ -1,0 +1,6 @@
+framework module Pods_SubManage_SubManageUITests {
+  umbrella header "Pods-SubManage-SubManageUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

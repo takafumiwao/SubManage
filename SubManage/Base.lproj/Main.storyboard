@@ -1,24 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RGH-m0-wv7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--明細-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SubManage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gZr-Eg-pDG">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ctQ-b4-duT">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X1O-aB-fJP" customClass="FSCalendar">
+                                                <rect key="frame" x="8" y="0.0" width="398" height="354"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="weekdayTextSize">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="headerDateFormat" value="YYYY年MM月"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="X1O-aB-fJP" firstAttribute="top" secondItem="ctQ-b4-duT" secondAttribute="top" id="NzH-rX-Fgm"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ctQ-b4-duT" firstAttribute="leading" secondItem="mj5-lq-Si1" secondAttribute="leading" id="EP4-Db-AXX"/>
+                                    <constraint firstItem="ctQ-b4-duT" firstAttribute="trailing" secondItem="mj5-lq-Si1" secondAttribute="trailing" id="S8u-fx-0tR"/>
+                                    <constraint firstItem="ctQ-b4-duT" firstAttribute="bottom" secondItem="mj5-lq-Si1" secondAttribute="bottom" id="khB-8p-V9m"/>
+                                    <constraint firstItem="ctQ-b4-duT" firstAttribute="top" secondItem="mj5-lq-Si1" secondAttribute="top" id="zph-WV-aIT"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="K7M-bb-TJr"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="mj5-lq-Si1"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="X1O-aB-fJP" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.395089" id="Es5-Tx-MvD"/>
+                            <constraint firstItem="X1O-aB-fJP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bkM-e1-lQf"/>
+                            <constraint firstItem="X1O-aB-fJP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.961353" id="qi7-ZB-Vy2"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="明細" id="Wat-wZ-UFk">
+                        <barButtonItem key="leftBarButtonItem" image="chart.bar.xaxis" catalog="system" id="VUT-kf-Hwc"/>
+                        <barButtonItem key="rightBarButtonItem" image="gearshape.fill" catalog="system" id="aub-7q-hDq"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="calender" destination="X1O-aB-fJP" id="9lz-Zm-CfM"/>
+                        <outlet property="scrollView" destination="gZr-Eg-pDG" id="Frm-Aj-HEF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1050.7246376811595" y="123.88392857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Wov-Ra-9rW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RGH-m0-wv7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x8k-WN-AFK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="H8q-iI-BYu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jFp-dD-3fP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="123.88392857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chart.bar.xaxis" catalog="system" width="128" height="98"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

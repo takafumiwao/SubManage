@@ -8,6 +8,7 @@ target 'SubManage' do
   pod 'FSCalendar'
   pod 'ReactiveSwift', '~> 6.1'
   pod 'RealmSwift'
+  pod 'ReactiveCocoa', '~> 10.1'
 
   # Pods for SubManage
 

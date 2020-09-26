@@ -18,6 +18,7 @@
 		AC3C46D4251C84A500D9200A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC3C46D2251C84A500D9200A /* LaunchScreen.storyboard */; };
 		AC3C46DF251C84A500D9200A /* SubManageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3C46DE251C84A500D9200A /* SubManageTests.swift */; };
 		AC3C46EA251C84A500D9200A /* SubManageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3C46E9251C84A500D9200A /* SubManageUITests.swift */; };
+		AC3DC27B251F4E0000E7985B /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3DC27A251F4E0000E7985B /* CircleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		AC3C46E5251C84A500D9200A /* SubManageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubManageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3C46E9251C84A500D9200A /* SubManageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubManageUITests.swift; sourceTree = "<group>"; };
 		AC3C46EB251C84A500D9200A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC3DC27A251F4E0000E7985B /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		BE006C150F17C6BB21D9F870 /* Pods-SubManage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubManage.debug.xcconfig"; path = "Target Support Files/Pods-SubManage/Pods-SubManage.debug.xcconfig"; sourceTree = "<group>"; };
 		EA441820867430DBA2E67316 /* Pods_SubManageTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SubManageTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8DF756A38F2BC9AB87B10A /* Pods_SubManage_SubManageUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SubManage_SubManageUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,8 @@
 		AC3C46C6251C84A400D9200A /* SubManage */ = {
 			isa = PBXGroup;
 			children = (
+				AC3DC278251F4DCE00E7985B /* Models */,
+				AC3DC277251F4DC400E7985B /* Views */,
 				AC7A380C251CAADA0020F6F3 /* Controllers */,
 				AC3C46C7251C84A400D9200A /* AppDelegate.swift */,
 				AC3C46C9251C84A400D9200A /* SceneDelegate.swift */,
@@ -153,6 +157,29 @@
 				AC3C46EB251C84A500D9200A /* Info.plist */,
 			);
 			path = SubManageUITests;
+			sourceTree = "<group>";
+		};
+		AC3DC277251F4DC400E7985B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AC3DC279251F4DDF00E7985B /* UIKit */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AC3DC278251F4DCE00E7985B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AC3DC279251F4DDF00E7985B /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				AC3DC27A251F4E0000E7985B /* CircleButton.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		AC7A380C251CAADA0020F6F3 /* Controllers */ = {
@@ -417,6 +444,7 @@
 				AC3C46CC251C84A400D9200A /* ViewController.swift in Sources */,
 				AC3C46C8251C84A400D9200A /* AppDelegate.swift in Sources */,
 				AC3C46CA251C84A400D9200A /* SceneDelegate.swift in Sources */,
+				AC3DC27B251F4E0000E7985B /* CircleButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

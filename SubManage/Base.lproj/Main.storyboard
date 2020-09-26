@@ -25,18 +25,68 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X1O-aB-fJP" customClass="FSCalendar">
                                                 <rect key="frame" x="8" y="0.0" width="398" height="354"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" red="0.98856598139999996" green="1" blue="0.94698649639999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="weekdayTextSize">
                                                         <real key="value" value="0.0"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="headerDateFormat" value="YYYY年MM月"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
+                                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTG-9g-BUZ" customClass="CircleButton" customModule="SubManage" customModuleProvider="target">
+                                                <rect key="frame" x="162" y="676" width="90" height="90"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <state key="normal" image="plus"/>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="ujk-Sk-LR3">
+                                                <rect key="frame" x="144" y="372" width="126.5" height="30"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="cpZ-9y-Wnn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="102.5" height="30"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合計：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLF-sv-bdh">
+                                                                <rect key="frame" x="0.0" y="0.0" width="76" height="30"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7f-ab-JCF">
+                                                                <rect key="frame" x="77" y="0.0" width="25.5" height="30"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ye0-vs-ZCp">
+                                                        <rect key="frame" x="109.5" y="0.0" width="17" height="30"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoSubscribe" translatesAutoresizingMaskIntoConstraints="NO" id="Owi-g3-gYh">
+                                                <rect key="frame" x="55.5" y="422" width="303" height="197"/>
+                                            </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.98856598139999996" green="1" blue="0.94698649639999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="X1O-aB-fJP" firstAttribute="top" secondItem="ctQ-b4-duT" secondAttribute="top" id="NzH-rX-Fgm"/>
+                                            <constraint firstItem="ujk-Sk-LR3" firstAttribute="top" secondItem="X1O-aB-fJP" secondAttribute="bottom" constant="18" id="Tg8-Mz-QPs"/>
+                                            <constraint firstItem="Owi-g3-gYh" firstAttribute="top" secondItem="ujk-Sk-LR3" secondAttribute="bottom" multiplier="1.03" constant="8" symbolic="YES" id="nfN-EV-cr3"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -51,20 +101,36 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.98856598139999996" green="1" blue="0.94698649639999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ujk-Sk-LR3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DOr-2T-S0u"/>
                             <constraint firstItem="X1O-aB-fJP" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.395089" id="Es5-Tx-MvD"/>
+                            <constraint firstItem="YTG-9g-BUZ" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="5:43" id="RVn-oa-k5l"/>
+                            <constraint firstItem="Owi-g3-gYh" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="101:258" id="VSB-YY-wHk"/>
+                            <constraint firstItem="Owi-g3-gYh" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.254522" id="WUd-Ph-nn5"/>
+                            <constraint firstItem="Owi-g3-gYh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZId-xZ-qIO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YTG-9g-BUZ" secondAttribute="bottom" constant="8" id="bEf-Wd-AHC"/>
                             <constraint firstItem="X1O-aB-fJP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bkM-e1-lQf"/>
                             <constraint firstItem="X1O-aB-fJP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.961353" id="qi7-ZB-Vy2"/>
+                            <constraint firstItem="YTG-9g-BUZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qn6-vw-MkA"/>
+                            <constraint firstItem="YTG-9g-BUZ" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.116279" id="wRA-hh-uk8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="明細" id="Wat-wZ-UFk">
-                        <barButtonItem key="leftBarButtonItem" image="chart.bar.xaxis" catalog="system" id="VUT-kf-Hwc"/>
-                        <barButtonItem key="rightBarButtonItem" image="gearshape.fill" catalog="system" id="aub-7q-hDq"/>
+                        <barButtonItem key="leftBarButtonItem" image="chart.bar.xaxis" catalog="system" id="VUT-kf-Hwc">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="gearshape.fill" catalog="system" id="aub-7q-hDq">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addSubscribeButton" destination="YTG-9g-BUZ" id="nuX-JV-6M2"/>
                         <outlet property="calender" destination="X1O-aB-fJP" id="9lz-Zm-CfM"/>
+                        <outlet property="noSubscribeImageView" destination="Owi-g3-gYh" id="clQ-yh-5xR"/>
                         <outlet property="scrollView" destination="gZr-Eg-pDG" id="Frm-Aj-HEF"/>
+                        <outlet property="settingButton" destination="aub-7q-hDq" id="Rq9-9l-HBZ"/>
+                        <outlet property="totalPriceLabel" destination="ye0-vs-ZCp" id="NnF-a5-Yt7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -79,6 +145,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x8k-WN-AFK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.98856598139999996" green="1" blue="0.94698649639999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -91,10 +158,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NoSubscribe" width="260" height="112"/>
         <image name="chart.bar.xaxis" catalog="system" width="128" height="98"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <image name="plus" width="38" height="36"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
